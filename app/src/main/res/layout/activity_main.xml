@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <LinearLayout
+        android:id="@+id/linear_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -25,14 +30,8 @@
                 android:id="@+id/team_a_score"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif"
-                android:gravity="center_horizontal"
                 android:text="0"
-                android:textColor="#000000"
-                android:textSize="40sp" />
-
+                style="@style/scoreText" />
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -44,22 +43,19 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="sans-serif"
                     android:gravity="right"
-                    android:text="Shots: "
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
+                    android:text="@string/shots"
+                    style="@style/secondaryText"
+                    android:paddingRight="6dp"/>
 
                 <TextView
                     android:id="@+id/team_a_shots"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="sans-serif"
                     android:gravity="left"
                     android:text="0"
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
+                    style="@style/secondaryText"/>
             </LinearLayout>
 
             <LinearLayout
@@ -73,22 +69,19 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="sans-serif"
                     android:gravity="right"
-                    android:text="Fouls: "
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
+                    android:text="@string/fouls"
+                    style="@style/secondaryText"
+                    android:paddingRight="6dp"/>
 
                 <TextView
                     android:id="@+id/team_a_fouls"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="sans-serif"
                     android:gravity="left"
                     android:text="0"
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
+                    style="@style/secondaryText"/>
             </LinearLayout>
 
             <Button
@@ -96,21 +89,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:onClick="setScoreTeamA"
-                android:text="Score +1" />
+                android:text="@string/button_1" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:onClick="setShotsTeamA"
-                android:text="Shots +1" />
+                android:text="@string/button_2" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:onClick="setFoulsTeamA"
-                android:text="Fouls +1" />
+                android:text="@string/button_3" />
 
         </LinearLayout>
 
@@ -118,7 +111,7 @@
             android:layout_width="1dp"
             android:layout_height="match_parent"
             android:layout_marginTop="16dp"
-            android:background="#00e1ff" />
+            android:background="#d32f2f" />
 
         <LinearLayout
             android:layout_width="0dp"
@@ -138,13 +131,8 @@
                 android:id="@+id/team_b_score"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="7dp"
-                android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif"
-                android:gravity="center_horizontal"
                 android:text="0"
-                android:textColor="#000000"
-                android:textSize="40sp" />
+                style="@style/scoreText"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -157,22 +145,19 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="sans-serif"
                     android:gravity="right"
-                    android:text="Shots: "
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
+                    android:text="@string/shots"
+                    style="@style/secondaryText"
+                    android:paddingRight="6dp"/>
 
                 <TextView
                     android:id="@+id/team_b_shots"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="sans-serif"
                     android:gravity="left"
                     android:text="0"
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
+                    style="@style/secondaryText" />
             </LinearLayout>
 
             <LinearLayout
@@ -186,22 +171,19 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:fontFamily="sans-serif"
                     android:gravity="right"
-                    android:text="Fouls: "
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
+                    android:text="@string/fouls"
+                    style="@style/secondaryText"
+                    android:paddingRight="6dp"/>
 
                 <TextView
                     android:id="@+id/team_b_fouls"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:fontFamily="sans-serif"
                     android:gravity="left"
                     android:text="0"
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
+                    style="@style/secondaryText"/>
             </LinearLayout>
 
             <Button
@@ -209,30 +191,31 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:onClick="setScoreTeamB"
-                android:text="Score +1" />
+                android:text="@string/button_1" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:onClick="setShotsTeamB"
-                android:text="Shots +1" />
+                android:text="@string/button_2" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:onClick="setFoulsTeamB"
-                android:text="Fouls +1" />
+                android:text="@string/button_3" />
         </LinearLayout>
     </LinearLayout>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_margin="16dp"
         android:onClick="resetStats"
-        android:text="Reset" />
+        android:text="@string/reset"
+        android:layout_below="@+id/linear_layout" />
 </RelativeLayout>
+</ScrollView>
